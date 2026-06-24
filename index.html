@@ -549,7 +549,7 @@ if(!s.telegramEnabled || !TG){
 // Отслеживание кликов через Метрику
 document.querySelectorAll('.btn-wa,.btn-tg').forEach(btn=>{
   btn.addEventListener('click',()=>{
-    if(SITE_SETTINGS.metrikaMessengerVisible !== false && typeof ym==='function' && YM){
+    if(window.__METRIKA_MESSENGER_VISIBLE__ !== false && typeof ym==='function' && YM){
       try{ ym(YM,'reachGoal','all_messenger'); }catch(e){}
     }
   });
