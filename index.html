@@ -543,14 +543,14 @@ function _openMsg(url){
   var el = document.getElementById(id);
   if(!el) return;
   if(!WA){ el.style.display='none'; return; }
-  el.setAttribute('href','#'); el.removeAttribute('target');
+  el.removeAttribute('href'); el.removeAttribute('target'); el.removeAttribute('rel'); el.setAttribute('role','button'); el.setAttribute('tabindex','0');
   el.addEventListener('click', function(e){ e.preventDefault(); _openMsg(WA); });
 });
 ['heroTg','stickyTg','ctaTg','contactTg'].forEach(function(id){
   var el = document.getElementById(id);
   if(!el) return;
   if(!TG || !s.telegramEnabled){ el.style.display='none'; return; }
-  el.setAttribute('href','#'); el.removeAttribute('target');
+  el.removeAttribute('href'); el.removeAttribute('target'); el.removeAttribute('rel'); el.setAttribute('role','button'); el.setAttribute('tabindex','0');
   el.addEventListener('click', function(e){ e.preventDefault(); _openMsg(TG); });
 });
 
