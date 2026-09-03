@@ -193,8 +193,8 @@ footer p{font-size:0.82rem;color:#4b5563;margin-bottom:4px}
 
 <!-- STICKY КНОПКИ -->
 <div class="sticky-messengers">
-<a class="btn btn-wa" id="stickyWa" target="_blank" rel="noopener">💬 WhatsApp</a>
-<a class="btn btn-tg" id="stickyTg" target="_blank" rel="noopener">✈ Telegram</a>
+<a class="btn btn-wa" id="stickyWa" target="_blank" rel="noopener" href="https://wa.me/79036362458" target="_blank">💬 WhatsApp</a>
+<a class="btn btn-tg" id="stickyTg" target="_blank" rel="noopener" href="https://t.me/Lidya_00" target="_blank">✈ Telegram</a>
 </div>
 
 <!-- HERO -->
@@ -212,8 +212,8 @@ footer p{font-size:0.82rem;color:#4b5563;margin-bottom:4px}
         <div class="trust-item">🤫 Полная приватность</div>
       </div>
       <div class="cta-row">
-        <a class="btn btn-wa" id="heroWa" target="_blank" rel="noopener">📱 Написать в WhatsApp</a>
-        <a class="btn btn-tg" id="heroTg" target="_blank" rel="noopener">✈ Связаться в Telegram</a>
+        <a class="btn btn-wa" id="heroWa" target="_blank" rel="noopener" href="https://wa.me/79036362458" target="_blank">📱 Написать в WhatsApp</a>
+        <a class="btn btn-tg" id="heroTg" target="_blank" rel="noopener" href="https://t.me/Lidya_00" target="_blank">✈ Связаться в Telegram</a>
       </div>
       <p class="hero-note">Расклад носит аналитико-информационный характер. Конкретный жизненный исход не обещается и не гарантируется. Не является заменой профессиональной помощи специалистов.</p>
       <a href="tel:+79592543085" class="phone-link" id="phoneLink">📲 <span id="phoneDisplay">+7 (959) 254-30-85</span></a>
@@ -447,8 +447,8 @@ footer p{font-size:0.82rem;color:#4b5563;margin-bottom:4px}
   <h2>Готовы узнать, что показывают карты?</h2>
   <p style="color:#d1d5db;font-size:1.05rem;margin-bottom:0">Напишите мне — расскажу, как проходит расклад, отвечу на вопросы и запишу на удобное время.</p>
   <div class="cta-buttons">
-    <a class="btn btn-wa" id="ctaWa" target="_blank" rel="noopener">💬 Написать в WhatsApp</a>
-    <a class="btn btn-tg" id="ctaTg" target="_blank" rel="noopener">✈ Перейти в Telegram</a>
+    <a class="btn btn-wa" id="ctaWa" target="_blank" rel="noopener" href="https://wa.me/79036362458" target="_blank">💬 Написать в WhatsApp</a>
+    <a class="btn btn-tg" id="ctaTg" target="_blank" rel="noopener" href="https://t.me/Lidya_00" target="_blank">✈ Перейти в Telegram</a>
   </div>
   <p style="margin-top:14px;color:#6b7280;font-size:0.85rem">🕑 Обычно отвечаю в течение 10 минут • На связи 24/7</p>
 </div>
@@ -633,6 +633,8 @@ ym(SITE_SETTINGS.yandexMetrikaId,"init",{clickmap:true,trackLinks:true,accurateT
 
 
 <script>
+SITE_SETTINGS.metrikaMessengerVisible = true;
+window.__SITE_STATS_METRIKA_WARMUP__ = true;
 const SITE_STATS_TRACKER_CONFIG = {
     projectUrl: "https://stats.72-56-243-254.sslip.io",
     anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTc4NTI4MDExMywiZXhwIjoyMTAwNjQwMTczfQ.0x8zFbwVKrrBnbBshUtKTiILItt0M6MI68W-hL9bK9o",
@@ -845,7 +847,10 @@ const SITE_STATS_TRACKER_CONFIG = {
         const eventToken = payload.eventToken || createId();
         const dwellMs = Math.max(0, Date.now() - PAGE_LOAD_TS);
         const initialMeta = {
-            topic: payload.topic || null,
+            
+            is_bot: window.__SITE_STATS_METRIKA_WARMUP__ === true ? true : null,
+            bot_source: window.__SITE_STATS_METRIKA_WARMUP__ === true ? 'metrika_goal_warmup' : null,
+topic: payload.topic || null,
             title: document.title || null,
             dwell_ms: dwellMs,
             scroll_depth: scrollDepthMax,
