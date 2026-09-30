@@ -9,7 +9,7 @@
 <meta property="og:description" content="Персональный подход к каждой ситуации. 14 лет практики. Приватно и по записи.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tarologia-magic.online/">
-<meta property="og:image" content="https://github.com/antomimpuls/tarologia-magic.online/raw/main/1.png">
+<meta property="og:image" content="https://tarologia-magic.online/photo-a9f59564ef314447a0684bd7fb36913d.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
@@ -175,6 +175,11 @@ footer p{font-size:0.82rem;color:#4b5563;margin-bottom:4px}
 @media(max-width:768px){.trust-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr;gap:10px}.cards{grid-template-columns:1fr}.cta-row .btn{min-width:unset;flex:1 1 100%}.hero{padding:38px 0 32px}.hero-grid>div:first-child{order:2;margin-top:18px}.hero-grid>div:last-child{order:1}.section{padding:38px 0}.nav{gap:14px}.slider-arrow{width:36px;height:36px;font-size:1.1rem}}
 @media(max-width:480px){.container{padding:0 14px}.btn{padding:13px 20px;font-size:0.88rem}.cta-box{padding:28px 18px}.privacy-block{padding:22px 16px}}
 </style>
+
+<style id="studio-photo-fit">
+.studio-photo-backdrop{position:absolute;inset:7px;border-radius:50%;overflow:hidden;z-index:1;background:center/cover no-repeat url("https://tarologia-magic.online/photo-a9f59564ef314447a0684bd7fb36913d.jpg");filter:blur(8px);opacity:.85;pointer-events:none}
+.hero-img #consultantPhoto{box-sizing:border-box!important;object-fit:contain!important;object-position:center!important;padding:12%!important;background:transparent!important}
+</style>
 </head>
 <body>
 
@@ -233,7 +238,7 @@ footer p{font-size:0.82rem;color:#4b5563;margin-bottom:4px}
     </div>
     <div>
       <div class="hero-img">
-        <img id="consultantPhoto" src="https://raw.githubusercontent.com/antomimpuls/gadalka-rus.ru/main/Ms7rm4GGiJnKWnigXhf0gAS1zdUS7gnrVCJNXge2_45CIpvWK8Lm2QoCiSnJM9YhJ3mO8rl9LZ5FalkmqEICncKl.jpg" alt="{{NAME}} Сергеевна — консультант по картам Таро">
+        <span class="studio-photo-backdrop" aria-hidden="true"></span><img id="consultantPhoto" src="https://tarologia-magic.online/photo-a9f59564ef314447a0684bd7fb36913d.jpg" alt="{{NAME}} Сергеевна — консультант по картам Таро">
       </div>
       <div class="psychic-name">
         <div class="psychic-name-title" id="heroName">{{NAME}}</div>
